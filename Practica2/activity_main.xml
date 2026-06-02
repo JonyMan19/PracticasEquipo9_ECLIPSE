@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1a1a2e"
+    android:padding="10dp" >
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MEMORAMA"
+        android:textColor="#64c8ff"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp" />
+
+    <!-- HUD: Intentos y Pares -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="8dp" >
+
+        <TextView
+            android:id="@+id/tvIntentos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Intentos: 0"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tvPares"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pares: 0 / 8"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <!-- Tablero 4x4 -->
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:numColumns="4"
+        android:horizontalSpacing="6dp"
+        android:verticalSpacing="6dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center" />
+
+    <!-- Botón reiniciar -->
+    <Button
+        android:id="@+id/btnReiniciar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reiniciar"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:background="#3a5fcd"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp" />
+
+</LinearLayout>
